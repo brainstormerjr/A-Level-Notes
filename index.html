@@ -6,6 +6,8 @@
 <div id="pure math notes"></div>
 <p style="font-size: 30px">Applied Math (Edexcel/Pearson)</p>
 <div id="applied math notes"></div>
+<p style="font-size: 30px">Physics (AQA)</p>
+<div id="physics notes"></div>
 <script>
     var purenames = ["1.1 Algebraic Expressions",
     "1.2 Quadratics",
@@ -53,6 +55,19 @@
     var target = document.getElementById("applied math notes");
     for (let i = 0; i < appliednames.length; i++) {
       target.innerHTML += `<a href="./Notes/Applied Math/${appliednames[i]}.pdf" target="_blank">${appliednames[i]}</a>`
+      target.innerHTML += "<br></br>"
+    }
+
+    var physicsnames = ["Density",
+    "Hookes Law",
+    "Measurements",
+    "Mechanics",
+    "Particle Physics",
+    "Waves"]
+
+    var target = document.getElementById("physics notes");
+    for (let i = 0; i < physicsnames.length; i++) {
+      target.innerHTML += `<a href="./Notes/Physics/${physicsnames[i]}.pdf" target="_blank">${physicsnames[i]}</a>`
       target.innerHTML += "<br></br>"
     }
 
