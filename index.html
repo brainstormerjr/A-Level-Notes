@@ -4,8 +4,10 @@
 <!-- <a href= "./Notes/Pure Math/1.2_ Quadratics.pdf">Algebraic Expressions</a> -->
 <p style="font-size: 30px">Pure Math (Edexcel/Pearson)</p>
 <div id="pure math notes"></div>
+<p style="font-size: 30px">Applied Math (Edexcel/Pearson)</p>
+<div id="applied math notes"></div>
 <script>
-    var filenames = ["1.1 Algebraic Expressions",
+    var purenames = ["1.1 Algebraic Expressions",
     "1.2 Quadratics",
     "1.3 Equations and Inequalities",
     "1.4 Graphs and Transformations",
@@ -29,8 +31,28 @@
     "2.8 Parametric Equations",
     "2.9 More Differentiation"]
     var target = document.getElementById("pure math notes");
-    for (let i = 0; i < filenames.length; i++) {
-      target.innerHTML += `<a href="./Notes/Pure Math/${filenames[i]}.pdf" target="_blank">${filenames[i]}</a>`
+    for (let i = 0; i < purenames.length; i++) {
+      target.innerHTML += `<a href="./Notes/Pure Math/${purenames[i]}.pdf" target="_blank">${purenames[i]}</a>`
+      target.innerHTML += "<br></br>"
+    }
+
+    var appliednames = ["M1.1 Introduction",
+    "M1.2 Constant Acceleration",
+    "M1.3 Forces and Motion",
+    "M1.4 Variable Acceleration",
+    "S1.1 Data Collection",
+    "S1.2 Variables",
+    "S1.3 Representations of Data",
+    "S1.4 Correlation",
+    "S1.5 Probability",
+    "S1.6 Statistical Distributions",
+    "S1.7 Hypothesis Testing",
+    "S2.2 Conditional Probability",
+    "S2.3 Normal Distribution"]
+
+    var target = document.getElementById("applied math notes");
+    for (let i = 0; i < appliednames.length; i++) {
+      target.innerHTML += `<a href="./Notes/Pure Math/${appliednames[i]}.pdf" target="_blank">${appliednames[i]}</a>`
       target.innerHTML += "<br></br>"
     }
 
