@@ -1,4 +1,12 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700;900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
 <style>
 table {
@@ -31,15 +39,60 @@ a:visited {
   color: #a07d09;
   text-decoration: none;
 }
+
+p, td, th, a, div {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Varela Round', sans-serif;
+}
+
+.banner {
+   width: 87%;
+   margin: auto;
+   margin-top: 40px;
+   position: relative;
+   padding: 80px;
+   padding-top: 20px;
+   padding-bottom: 80px;
+   border-radius: 10px;
+   font-weight: 500;
+}
+
+.description {
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 20px;
+}
+
+a.githubLink {
+  color: #fce683; !important
+}
+
+
 </style>
 
 <title>A Level Notes</title>
 
 
 
-<body style="background-color:fcf7b0">
-<p style="font-size: 100px; font-family:'Poppins', sans-serif; margin: auto; text-align: center; font-weight: 600">A LEVEL NOTES</p>
-<p style="font-size: 30px; font-family:'Poppins', sans-serif; margin: auto; text-align: center; padding-bottom: 30px">BY HAROLD KWAN</p>
+<body style="background-color: #fcf4cc; margin-bottom: 100px">
+<div style="background-color: #5271FF;" class="banner">
+  <p style="font-size: 60px; font-weight: 600;" class="description">A-Level Notes</p>
+  <!-- <p class="description">By Harold Kwan</p> -->
+  <div style="font-family: 'Poppins', sans-serif;" class="description">
+    A bunch of notes that I took during my A-Level course. Subjects include Mathematics (both pure and applied) and
+    Physics. These notes are not 100% complete and are not officially issued by the exam boards, but are just useful
+    during self-revision. Feel free to read and download anything that is useful and I apologise for any missing topics :)
+    <br></br>
+    <div style="font-size: 15px">
+      File naming system:
+      <ul>
+        <li>M = Mechanics , S = Statistics</li>
+        <li>X.Y => X = Book number, Y = Chapter number</li>
+      </ul>
+    </div>
+  </div>
+</div>
 <!-- <p style="font-size: 30px">Pure Math (Edexcel/Pearson)</p>
 <div id="pure math notes"></div>
 <p style="font-size: 30px">Applied Math (Edexcel/Pearson)</p>
@@ -47,14 +100,20 @@ a:visited {
 <p style="font-size: 30px">Physics (AQA)</p>
 <div id="physics notes"></div> -->
 
-<table id="table" style="margin: auto">
+<table id="table" style="margin: auto; border-radius: 10px; margin-top: 40px">
   <tr>
-    <th style="font-family:'Poppins', sans-serif">Pure Math (Edexcel/Pearson)</th>
-    <th style="font-family:'Poppins', sans-serif">Applied Math (Edexcel/Pearson)</th>
-    <th style="font-family:'Poppins', sans-serif">Physics (AQA)</th>
+    <th>Pure Math (Edexcel/Pearson)</th>
+    <th>Applied Math (Edexcel/Pearson)</th>
+    <th>Physics (AQA)</th>
   </tr>
 </table>
 </body>
+
+<div style="background-color: #5271FF; padding-top: 40px; padding-bottom: 40px;" class="banner">
+  <div class="description" style="text-align:center;">Notes by Harold Kwan</div>
+  <br>
+  <div class="description" style="text-align:center;"><a href="https://github.com/brainstormerjr/A-Level-Notes" target="_blank" class="githubLink">GitHub Page</a></div>
+</div>
 
 <script>
     var purenames = ["1.1 Algebraic Expressions",
@@ -126,8 +185,9 @@ a:visited {
       if (i < appliednames.length) appliedname = appliednames[i];
       let physicsname = "";
       if (i < physicsnames.length) physicsname = physicsnames[i];
-      table.innerHTML += `<tr><td><a href="./Notes/Pure Math/${purename}.pdf"  style="font-family:'Poppins', sans-serif">${purename}</a></td><td><a href="./Notes/Applied Math/${appliedname}.pdf"  style="font-family:'Poppins', sans-serif">${appliedname}</a></td><td><a href="./Notes/Physics/${physicsname}.pdf"  style="font-family:'Poppins', sans-serif">${physicsname}</a></td></tr>`
+      table.innerHTML += `<tr><td><a href="./Notes/Pure Math/${purename}.pdf">${purename}</a></td><td><a href="./Notes/Applied Math/${appliedname}.pdf">${appliedname}</a></td><td><a href="./Notes/Physics/${physicsname}.pdf">${physicsname}</a></td></tr>`
     }
 
 
 </script>
+</html>
