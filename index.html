@@ -1,38 +1,58 @@
-<title>A Level Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700;900&display=swap" rel="stylesheet">
 
 <style>
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 97%;
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #fcc30a;
   text-align: left;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+td {
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #fcc30a;
+}
+
+a:link {
+  color: #282828;
+  text-decoration: none;
+}
+/* visited link */
+a:visited {
+  color: #a07d09;
+  text-decoration: none;
 }
 </style>
 
-<!-- <p style="font-size: 70px">A LEVEL NOTES</p>
-<p style="font-size: 30px">Pure Math (Edexcel/Pearson)</p>
+<title>A Level Notes</title>
+
+
+
+<body style="background-color:fcf7b0">
+<p style="font-size: 100px; font-family:'Poppins', sans-serif; margin: auto; text-align: center">A LEVEL NOTES <a style="font-size: 30px">BY HAROLD KWAN</a></p>
+<!-- <p style="font-size: 30px">Pure Math (Edexcel/Pearson)</p>
 <div id="pure math notes"></div>
 <p style="font-size: 30px">Applied Math (Edexcel/Pearson)</p>
 <div id="applied math notes"></div>
 <p style="font-size: 30px">Physics (AQA)</p>
 <div id="physics notes"></div> -->
 
-<table id="table">
+<table id="table" style="margin: auto">
   <tr>
-    <th>Pure Math (Edexcel/Pearson)</th>
-    <th>Applied Math (Edexcel/Pearson)</th>
-    <th>Physics (AQA)</th>
+    <th style="font-family:'Poppins', sans-serif">Pure Math (Edexcel/Pearson)</th>
+    <th style="font-family:'Poppins', sans-serif">Applied Math (Edexcel/Pearson)</th>
+    <th style="font-family:'Poppins', sans-serif">Physics (AQA)</th>
   </tr>
 </table>
+</body>
 
 <script>
     var purenames = ["1.1 Algebraic Expressions",
@@ -104,7 +124,7 @@ tr:nth-child(even) {
       if (i < appliednames.length) appliedname = appliednames[i];
       let physicsname = "";
       if (i < physicsnames.length) physicsname = physicsnames[i];
-      table.innerHTML += `<tr><td><a href="./Notes/Pure Math/${purename}.pdf">${purename}</a></td><td><a href="./Notes/Applied Math/${appliedname}.pdf">${appliedname}</a></td><td><a href="./Notes/Physics/${physicsname}.pdf">${physicsname}</a></td></tr>`
+      table.innerHTML += `<tr><td><a href="./Notes/Pure Math/${purename}.pdf"  style="font-family:'Poppins', sans-serif">${purename}</a></td><td><a href="./Notes/Applied Math/${appliedname}.pdf"  style="font-family:'Poppins', sans-serif">${appliedname}</a></td><td><a href="./Notes/Physics/${physicsname}.pdf"  style="font-family:'Poppins', sans-serif">${physicsname}</a></td></tr>`
     }
 
 
