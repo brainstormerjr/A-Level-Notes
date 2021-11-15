@@ -1,13 +1,39 @@
 <title>A Level Notes</title>
 
-<p style="font-size: 70px">A LEVEL NOTES</p>
-<!-- <a href= "./Notes/Pure Math/1.2_ Quadratics.pdf">Algebraic Expressions</a> -->
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<!-- <p style="font-size: 70px">A LEVEL NOTES</p>
 <p style="font-size: 30px">Pure Math (Edexcel/Pearson)</p>
 <div id="pure math notes"></div>
 <p style="font-size: 30px">Applied Math (Edexcel/Pearson)</p>
 <div id="applied math notes"></div>
 <p style="font-size: 30px">Physics (AQA)</p>
-<div id="physics notes"></div>
+<div id="physics notes"></div> -->
+
+<table id="table">
+  <tr>
+    <th>Pure Math (Edexcel/Pearson)</th>
+    <th>Applied Math (Edexcel/Pearson)</th>
+    <th>Physics (AQA)</th>
+  </tr>
+</table>
+
 <script>
     var purenames = ["1.1 Algebraic Expressions",
     "1.2 Quadratics",
@@ -32,11 +58,11 @@
     "2.7 Trigonometry and Modelling",
     "2.8 Parametric Equations",
     "2.9 More Differentiation"]
-    var target = document.getElementById("pure math notes");
-    for (let i = 0; i < purenames.length; i++) {
-      target.innerHTML += `<a href="./Notes/Pure Math/${purenames[i]}.pdf" target="_blank">${purenames[i]}</a>`
-      target.innerHTML += "<br></br>"
-    }
+    // var target = document.getElementById("pure math notes");
+    // for (let i = 0; i < purenames.length; i++) {
+    //   target.innerHTML += `<a href="./Notes/Pure Math/${purenames[i]}.pdf" target="_blank">${purenames[i]}</a>`
+    //   target.innerHTML += "<br></br>"
+    // }
 
     var appliednames = ["M1.1 Introduction",
     "M1.2 Constant Acceleration",
@@ -52,11 +78,11 @@
     "S2.2 Conditional Probability",
     "S2.3 Normal Distribution"]
 
-    var target = document.getElementById("applied math notes");
-    for (let i = 0; i < appliednames.length; i++) {
-      target.innerHTML += `<a href="./Notes/Applied Math/${appliednames[i]}.pdf" target="_blank">${appliednames[i]}</a>`
-      target.innerHTML += "<br></br>"
-    }
+    // var target = document.getElementById("applied math notes");
+    // for (let i = 0; i < appliednames.length; i++) {
+    //   target.innerHTML += `<a href="./Notes/Applied Math/${appliednames[i]}.pdf" target="_blank">${appliednames[i]}</a>`
+    //   target.innerHTML += "<br></br>"
+    // }
 
     var physicsnames = ["Density",
     "Hookes Law",
@@ -65,10 +91,20 @@
     "Particle Physics",
     "Waves"]
 
-    var target = document.getElementById("physics notes");
-    for (let i = 0; i < physicsnames.length; i++) {
-      target.innerHTML += `<a href="./Notes/Physics/${physicsnames[i]}.pdf" target="_blank">${physicsnames[i]}</a>`
-      target.innerHTML += "<br></br>"
+    // var target = document.getElementById("physics notes");
+    // for (let i = 0; i < physicsnames.length; i++) {
+    //   target.innerHTML += `<a href="./Notes/Physics/${physicsnames[i]}.pdf" target="_blank">${physicsnames[i]}</a>`
+    //   target.innerHTML += "<br></br>"
+    // }
+
+    var table = document.getElementById("table");
+    for (let i = 0; i < purenames.length; i++) {
+      let purename = purenames[i];
+      let appliedname = "";
+      if (i < appliednames.length) appliedname = appliednames[i];
+      let physicsname = "";
+      if (i < physicsnames.length) physicsname = physicsnames[i];
+      table.innerHTML += `<tr><td><a href="./Notes/Pure Math/${purename}.pdf">${purename}</a></td><td><a href="./Notes/Applied Math/${appliedname}.pdf">${appliedname}</a></td><td><a href="./Notes/Physics/${physicsname}.pdf">${physicsname}</a></td></tr>`
     }
 
 
