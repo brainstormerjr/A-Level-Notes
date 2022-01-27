@@ -107,6 +107,7 @@ a.githubLink {
       <th>Pure Math (Edexcel)</th>
       <th>Applied Math (Edexcel)</th>
       <th>Further Pure (Edexcel)</th>
+      <th>Further Applied (Edexcel)</th>
       <th>Physics (AQA)</th>
     </tr>
   </table>
@@ -170,24 +171,39 @@ a.githubLink {
     // }
 
     var physicsnames = ["1 Measurements",
-  "2 Particle Physics",
-"3 Waves",
-"4.1 Mechanics",
-"4.2 Density",
-"4.2 Materials",
-"5 Electricity",
-"6 Circular Motion & SHM",
-"7 Fields",
-"8 Nuclear Physics"]
+      "2 Particle Physics",
+      "3 Waves",
+      "4.1 Mechanics",
+      "4.2 Density",
+      "4.2 Materials",
+      "5 Electricity",
+      "6 Circular Motion & SHM",
+      "7 Fields",
+      "8 Nuclear Physics"]
 
     var furtherpurenames = ["1.1, 1.2 Complex Numbers",
     "1.3 Series",
-    "1.4 Roots of Polynomials",
-    "1.5 Volumes of Revolution",
-    "1.6 Matrices",
-    "1.7 Linear Transformations",
-    "1.8 Proof by Induction",
-    "1.9 Vectors"]
+      "1.4 Roots of Polynomials",
+      "1.5 Volumes of Revolution",
+      "1.6 Matrices",
+      "1.7 Linear Transformations",
+      "1.8 Proof by Induction",
+      "1.9 Vectors",
+      "2.1 Complex Numbers",
+      "2.2 Series",
+      "2.3 Methods in Calculus",
+      "2.4 Volumes of Revolution"]
+
+    var furtherappliednames = ["M1 Momentum and Impulse",
+      "M2 Work, Energy and Power",
+      "M3 Elastic Strings and Springs",
+      "M4 1D Elastic Collisions",
+      "S2 Poisson Distribution",
+      "S3 Geometric And Negative Binomial Distributions",
+      "S4 Hypothesis Testing",
+      "S5 Central Limit Theorem",
+      "S6 Chi-squared Tests",
+      "S7 Probability Generating Functions"]
 
     // var target = document.getElementById("physics notes");
     // for (let i = 0; i < physicsnames.length; i++) {
@@ -204,9 +220,12 @@ a.githubLink {
       if (i < physicsnames.length) physicsname = physicsnames[i];
       let furtherpurename = "";
       if (i < furtherpurenames.length) furtherpurename = furtherpurenames[i];
+      let furtherappliedname = "";
+      if (i < furtherappliednames.length) furtherappliedname = furtherappliednames[i];
       let text = `<tr><td><a href="./Notes/Pure Math/${purename}.pdf">${purename}</a></td>`
       text += `<td><a href="./Notes/Applied Math/${appliedname}.pdf">${appliedname}</a></td>`
       text += `<td><a href="./Notes/Further Pure/${furtherpurename}.pdf">${furtherpurename}</a></td>`
+      text += `<td><a href="./Notes/Further Applied/${furtherappliedname}.pdf">${furtherappliedname}</a></td>`
       text += `<td><a href="./Notes/Physics/${physicsname}.pdf">${physicsname}</a></td></tr>`
 
       table.innerHTML += text;
